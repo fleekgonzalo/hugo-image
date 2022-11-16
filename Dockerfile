@@ -34,8 +34,8 @@ ENV GOPATH /gocode
 
 # Install Hugo.
 RUN go get -u -v github.com/kardianos/govendor
-RUN go get -u -v github.com/spf13/hugo
-RUN cd $GOPATH/src/github.com/spf13/hugo && govendor sync && go install
+RUN go get -u -v github.com/gohugoio/hugo
+RUN cd $GOPATH/src/github.com/gohugoio/hugo && govendor sync && go install
 
 # Install firebase, sw-precache, and lighthouse.
 RUN npm install -g firebase-tools
